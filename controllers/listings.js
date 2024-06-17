@@ -68,7 +68,7 @@ if(typeof req.file !== "undefined"){
   module.exports.deleteListing = async (req, res) => {
     let { id } = req.params;
     let listing = await Listing.findById(id);
-    await Listing.findByIdAndUpdate(id, { ...req.body.listing });
-    req.flash("success", "Listing Updated");
-    res.redirect(`/listings/${id}`);
+    await Listing.findByIdAndDelete(id, { ...req.body.listing });
+    req.flash("success", "Listing Deleted");
+    res.redirect("/listings");
   }
