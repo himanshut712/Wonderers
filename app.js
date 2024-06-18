@@ -81,7 +81,7 @@ app.use((req,res,next) =>{
 
 app.use("/listings",listingRouter)
 app.use("/listings/:id/reviews",reviewsRouter)
-app.use("/",userRouter)
+app.use("/listings",userRouter)
 
 
 
@@ -93,7 +93,7 @@ app.use((err,req,res,next)=>{
 res.status(statusCode).render("error.ejs",{message})
 //res.status(statusCode).send(message);
 })
-app.listen("1233/listings", () => {
+app.listen("7238", () => {
     console.log("Server is listening to port 8080");
 });
  

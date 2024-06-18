@@ -115,6 +115,20 @@ footer {
   .filter p{
      font-size: 0.8rem;
   }
+  #filters .filter a {
+    text-decoration: none;
+    color: inherit; 
+  }
+  
+  #filters .filter a:hover {
+    color: #000; 
+  }
+  @media (max-width: 768px) {
+    #filters {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
   .tax-info{
     display: none;
   }
@@ -131,3 +145,4 @@ footer {
     height: 400px;
     width: 80vh;
   }
+  

@@ -37,6 +37,7 @@ router.route("/")
   isLoggedIn,isOwner,
   wrapAsync(listingController.deleteListing)
 );
+router.get('/category/:category', wrapAsync(listingController.filterByCategory));
 
 
 //Edit route

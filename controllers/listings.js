@@ -34,15 +34,27 @@ module.exports.index=async (req, res) => {
     res.render("listings/show.ejs", { listing });
 }
 module.exports.createListing = async (req, res, next) => {
-  let url = req.file.path;
-  let filename=req.file.filename;
+  try {
+    console.log(req.file); // Add this line to see what req.file contains
+
     const newListing = new Listing(req.body.listing);
     newListing.owner = req.user._id;
-    newListing.image={url,filename}
+
+    if (req.file) {
+      newListing.image = {
+        url: req.file.path,
+        filename: req.file.filename
+      };
+    }
+
     await newListing.save();
     req.flash("success", "New Listing Created");
     res.redirect("/listings");
+  } catch (e) {
+    next(e);
   }
+};
+
   module.exports.renderEditForm = async (req, res) => {
     let { id } = req.params;
     const listing = await Listing.findById(id);
@@ -72,3 +84,8 @@ if(typeof req.file !== "undefined"){
     req.flash("success", "Listing Deleted");
     res.redirect("/listings");
   }
+module.exports.filterByCategory = async (req, res) => {
+  const { category } = req.params;
+  const listings = await Listing.find({ category });
+  res.render('listings/index.ejs', { allListings: listings });
+};
