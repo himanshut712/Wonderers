@@ -1,11 +1,12 @@
-{
+
+  {
     "version": 2,
+    "routes": [
+      { "src": "/", "status": 301, "headers": { "Location": "/listings" } },
+      { "src": "/(.*)", "dest": "app.js" }
+    ],
     "builds": [
       { "src": "app.js", "use": "@vercel/node" }
-    ],
-    "rewrites": [
-      { "source": "/", "destination": "/listings" },
-      { "source": "/(.*)", "destination": "app.js" }
     ]
   }
   
