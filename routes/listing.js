@@ -1,53 +1,27 @@
 const express = require("express");
 const router = express.Router();
-const Listing = require("../models/listing.js");
-const wrapAsync = require("../utils/wrapAsync.js");
-const { isLoggedIn, isOwner, validateListing } = require("../middleware.js");
-const listingController = require("../controllers/listings.js");
-const multer = require("multer")
-const {storage} = require("../cloudConfig.js")
-const upload =multer({storage})
-router.route("/")
-.get(
-  wrapAsync(listingController.index)
-)
-//new route
-router.get("/new", isLoggedIn,listingController.renderNewForm);
-//search route
-router.get("/search", wrapAsync(listingController.searchListings));
+const listingController = require("../controllers/listings");
+const { isLoggedIn, isOwner, validateListing } = require("../middleware");
 
-router.route("/")
-.post(isLoggedIn,
-    upload.single("listing[image]"),  validateListing,
-  wrapAsync(listingController.createListing)
-);
+// Listings index route
+router.get("/", listingController.index);
 
- router.route("/:id")
- .get(
-  wrapAsync(listingController.showListing)
-)
-.put(
-  isLoggedIn,
-  isOwner,
-  upload.single("listing[image]"),
-   validateListing,
-  wrapAsync(listingController.updateListing)
-)
-.delete( 
-  isLoggedIn,isOwner,
-  wrapAsync(listingController.deleteListing)
-);
-router.get('/category/:category', wrapAsync(listingController.filterByCategory));
+// New listing route
+router.get("/new", isLoggedIn, listingController.renderNewForm);
+router.post("/", isLoggedIn, validateListing, listingController.createListing);
 
+// Edit listing route
+router.get("/:id/edit", isLoggedIn, isOwner, listingController.renderEditForm);
 
-//Edit route
-router.get(
-  "/:id/edit",
-  isLoggedIn,
-  isOwner,
-  wrapAsync(listingController.renderEditForm)
-);
+// Show listing route
+router.get("/:id", listingController.showListing);
+router.put("/:id", isLoggedIn, isOwner, validateListing, listingController.updateListing);
+router.delete("/:id", isLoggedIn, isOwner, listingController.deleteListing);
 
+// Search listings route
+router.get("/search", isLoggedIn, listingController.searchListings);
 
+// Filter by category route
+router.get('/category/:category', isLoggedIn, listingController.filterByCategory);
 
 module.exports = router;
