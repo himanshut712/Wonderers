@@ -91,6 +91,19 @@
             </a>
         <% } %>
     </div>
+    <style>
+        @media  (max-width:376px){
+            #filter{
+                width: 375px;
+                max-width: 375px;
+            }
+            .container{
+                width: 375px;
+                max-width: 375px;
+            }
+            
+        }
+    </style>
     <script>
         let taxSwitch = document.getElementById("flexSwitchCheckDefault");
         taxSwitch.addEventListener("click", () => {
