@@ -203,11 +203,15 @@ footer {
   }
 
   .listing-card {
-    width: 90% !important;
-    margin-bottom: 1rem;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+    .listing-card {
+      width: 90%;
+      margin-bottom: 1rem;
+      margin-left: auto;
+      margin-right: auto;
+       /* Center text content */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
   }
 
   /* Adjust navbar spacing */
