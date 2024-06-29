@@ -2,6 +2,8 @@
 html, body {
   height: 100%;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -11,6 +13,7 @@ body {
 
 .container {
   padding: 20px;
+  max-width: 100%;
 }
 
 /* Navbar */
@@ -67,7 +70,7 @@ footer {
   flex-wrap: wrap;
   justify-content: center;
   align-items: space-evenly;
-  width: 100% !important;
+  width: 100%;
 }
 
 /* Cards */
@@ -104,12 +107,7 @@ footer {
   background-color: white;
 }
 
-.add-btn {
-  background-color: #fe424d !important;
-  border: none !important;
-}
-
-.edit-btn {
+.add-btn, .edit-btn {
   background-color: #fe424d !important;
   border: none !important;
 }
@@ -157,14 +155,14 @@ footer {
 /* Responsive Styles */
 @media (max-width: 375px) {
   .container {
-    width: 100% !important;
+    width: calc(100% - 40px); /* Adjust for padding */
     max-width: 375px;
     margin: 0 auto;
     padding: 0 20px;
   }
 
   #filters {
-    width: calc(100% - 40px); /* Considering padding */
+    width: 100%;
     max-width: 375px;
     display: flex;
     flex-wrap: nowrap;
@@ -249,6 +247,7 @@ footer {
   }
 }
 
+/* Apply box-sizing globally */
 *, *::before, *::after {
   box-sizing: border-box;
 }
