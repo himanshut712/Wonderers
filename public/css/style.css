@@ -12,7 +12,7 @@ body {
 }
 
 .container {
-  padding: 20px;
+  padding: 0 1rem; /* Match navbar padding */
   max-width: 100%;
 }
 
@@ -155,20 +155,19 @@ footer {
 /* Responsive Styles */
 @media (max-width: 375px) {
   .container {
-    width: calc(100% - 40px); /* Adjust for padding */
-    max-width: 375px;
+    width: calc(100% - 2rem); /* Adjust for padding */
+    padding: 0 1rem; /* Match navbar padding */
     margin: 0 auto;
-    padding: 0 20px;
   }
 
   #filters {
-    width: 100%;
-    max-width: 375px;
+    width: calc(100% - 2rem); /* Adjust for padding */
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     white-space: nowrap;
+    padding: 0 1rem; /* Match container padding */
   }
 
   .filter {
@@ -209,7 +208,7 @@ footer {
   .navbar {
     margin: 0;
     height: 3rem; /* Reduce the height of the navbar */
-    padding: 0 0.5rem;
+    padding: 0 1rem; /* Match container padding */
   }
 
   .fa-compass {
