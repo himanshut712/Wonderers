@@ -164,7 +164,10 @@ footer {
     margin: 0 auto;
     padding: 0 1rem; /* Match navbar padding */
   }
-
+.card{
+  width: 370px !important;
+  max-width: 370px !important;
+}
   #filters {
     width: calc(100% - 2rem); /* Adjust for padding */
     max-width: 370px;
