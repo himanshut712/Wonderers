@@ -157,7 +157,7 @@ footer {
 }
 
 /* Responsive Styles */
-@media (max-width: 375px) {
+@media (max-width: 376px) {
   .container {
     width: calc(100% - 2rem); /* Adjust for padding */
     max-width: 370px;
@@ -249,7 +249,7 @@ footer {
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 376px) {
   .offset-md-2 {
     margin-left: 16.66667%; /* Adjust as needed based on your column structure */
   }
