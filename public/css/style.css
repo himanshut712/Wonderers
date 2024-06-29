@@ -133,6 +133,10 @@ footer {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+.container{
+  width: 375px !important;
+  margin-left: 2rem;
+}
   #filters {
       flex-wrap: nowrap;
       overflow-x: auto;
@@ -166,12 +170,14 @@ footer {
   .listing-card {
       width: 90% !important;
       margin-bottom: 1rem;
+      offset:calc(1);
       margin-left: auto;
       margin-right: auto;
   }
   
   /* Adjust filter section into a horizontal slider */
   #filters {
+    width: 375px;
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
@@ -220,5 +226,10 @@ footer {
     margin-right: auto;
     max-width: 100%;
     height: auto;
+  }
+}
+@media (max-width: 375px) {
+  .offset-md-2 {
+    margin-left: 16.66667%; /* Adjust as needed based on your column structure */
   }
 }
