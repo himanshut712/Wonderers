@@ -204,7 +204,7 @@ footer {
 
   .listing-card {
     width: 90%;
-    margin: 0 1rem; /* Center horizontally */
+    margin: 0 auto !important;  /* Center horizontally */
     text-align: center; /* Center text content */
     display: flex;
     flex-direction: column;
