@@ -168,6 +168,11 @@ footer {
 
 @media (max-width: 376px) {
   /* Adjust card width */
+  .container{
+    width: 375px !important;
+    max-width: 375px;
+    margin-left: 2rem;
+  }
   .listing-card {
       width: 90% !important;
       margin-bottom: 1rem;
