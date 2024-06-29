@@ -135,6 +135,7 @@ footer {
 @media (max-width: 768px) {
 .container{
   width: 375px !important;
+  max-width: 375px;
   margin-left: 2rem;
 }
   #filters {
@@ -178,6 +179,7 @@ footer {
   /* Adjust filter section into a horizontal slider */
   #filters {
     width: 375px;
+    max-width: 375px;
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
