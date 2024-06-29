@@ -1,3 +1,4 @@
+/* Base styles */
 html, body {
   height: 100%;
   margin: 0;
@@ -21,10 +22,12 @@ body {
   justify-content: space-between;
   padding: 0 1rem; /* Adjust padding as needed */
 }
+
 .fa-compass {
   color: #fe424d;
   font-size: 2rem;
 }
+
 .nav-link {
   color: #222222 !important;
   white-space: nowrap; /* Prevent text wrapping */
@@ -34,23 +37,28 @@ body {
 footer {
   /* Add styles if needed */
 }
+
 .f-info-links a {
   text-decoration: none;
   color: #222222;
 }
+
 .f-info-links a:hover {
   text-decoration: underline;
 }
+
 .f-info-links, .f-info-socials, .f-info-brand {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .f-info-socials i {
   font-size: 1.2rem;
   margin-right: 2rem;
 }
+
 .f-info {
   text-align: center;
   height: 8rem;
@@ -67,17 +75,21 @@ footer {
   border: none !important;
   margin-bottom: 2rem;
 }
+
 .card-img-top {
   border-radius: 1rem !important;
   width: 100% !important;
   object-fit: cover !important;
 }
+
 .card-body {
   padding: 0 !important;
 }
+
 .card-text p {
   font-weight: 400 !important;
 }
+
 .listing-link {
   text-decoration: none;
 }
@@ -86,133 +98,126 @@ footer {
 .card-img-overlay {
   opacity: 0;
 }
+
 .card-img-overlay:hover {
   opacity: 0.2;
   background-color: white;
 }
+
 .add-btn {
   background-color: #fe424d !important;
   border: none !important;
 }
+
 .edit-btn {
   background-color: #fe424d !important;
   border: none !important;
 }
+
 .btns {
   display: flex;
 }
+
 .show-card {
   padding-left: 0;
   padding-right: 0;
 }
+
 #filters {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
+
 .filter {
   text-align: center;
   margin-right: 2rem;
   margin-top: 2rem;
   opacity: 0.7;
 }
+
 .filter:hover {
   opacity: 1;
   cursor: pointer;
 }
+
 .filter p {
   font-size: 0.8rem;
 }
+
 #filters .filter a {
   text-decoration: none;
   color: inherit;
 }
+
 #filters .filter a:hover {
   color: #000;
 }
 
 /* Responsive Styles */
-@media (max-width: 768px) {
-.container{
-  width: 375px !important;
-  max-width: 375px;
-  margin-left: 2rem;
-}
-  #filters {
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      white-space: nowrap;
-  }
-  .filter {
-      display: inline-block;
-      white-space: normal;
-  }
-  .tax-info {
-      display: none;
-  }
-  .tax-toggle {
-      border: 1px solid black;
-      border-radius: 1rem;
-      height: 3.25rem;
-      padding: 1rem;
-      margin-left: 2rem;
-      display: flex;
-      align-items: center;
-  }
-  #map {
-      height: 400px;
-      width: 100%;
-  }
-}
-
-@media (max-width: 376px) {
-  /* Adjust card width */
-  .container{
-    width: 375px !important;
+@media (max-width: 375px) {
+  .container {
+    width: 100% !important;
     max-width: 375px;
-    margin-left: 2rem;
+    margin: 0 auto;
+    padding: 0 20px;
   }
-  .listing-card {
-      width: 90% !important;
-      margin-bottom: 1rem;
-      offset:calc(1);
-      margin-left: auto;
-      margin-right: auto;
-  }
-  
-  /* Adjust filter section into a horizontal slider */
+
   #filters {
-    width: 375px;
+    width: calc(100% - 40px); /* Considering padding */
     max-width: 375px;
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
-    padding: 10px;
     -webkit-overflow-scrolling: touch;
     white-space: nowrap;
   }
+
   .filter {
+    display: inline-block;
+    white-space: normal;
     flex: 0 0 auto; /* Prevent the filters from shrinking */
     margin-right: 1rem; /* Reduce the margin for smaller screens */
     text-align: center;
-    display: inline-block;
   }
 
-  /* Hide filters beyond the 6th on small screens */
-  .filter:nth-child(n+7) {
+  .tax-info {
     display: none;
   }
 
+  .tax-toggle {
+    border: 1px solid black;
+    border-radius: 1rem;
+    height: 3.25rem;
+    padding: 1rem;
+    margin-left: 2rem;
+    display: flex;
+    align-items: center;
+  }
+
+  #map {
+    height: 400px;
+    width: 100%;
+  }
+
+  .listing-card {
+    width: 90% !important;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   /* Adjust navbar spacing */
-  .navbar { 
+  .navbar {
     margin: 0;
     height: 3rem; /* Reduce the height of the navbar */
     padding: 0 0.5rem;
   }
+
   .fa-compass {
     font-size: 1.5rem; /* Adjust the icon size */
   }
+
   .nav-link {
     font-size: 0.8rem; /* Reduce the font size of navbar links */
   }
@@ -224,9 +229,11 @@ footer {
     padding: 0.5rem;
     font-size: 0.8rem;
   }
+
   .tax-toggle .form-check-label {
     font-size: 0.4rem;
   }
+
   .container img {
     display: block;
     margin-left: auto;
@@ -235,8 +242,13 @@ footer {
     height: auto;
   }
 }
+
 @media (max-width: 375px) {
   .offset-md-2 {
     margin-left: 16.66667%; /* Adjust as needed based on your column structure */
   }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
 }
