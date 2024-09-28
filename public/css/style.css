@@ -4,8 +4,8 @@ html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  max-width: 100%; /* Ensure the body doesn't exceed viewport width */
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  max-width: 100%; 
+  overflow-x: hidden;  /
 }
 
 body {
@@ -14,8 +14,8 @@ body {
 }
 
 .container {
-  padding: 0 1rem; /* Match navbar padding */
-  max-width: 100%; /* Ensure container doesn't exceed viewport width */
+  padding: 0 1rem; 
+  max-width: 100%;  
 }
 
 /* Navbar */
@@ -25,8 +25,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 1rem; /* Adjust padding as needed */
-  width: calc(100% - 2rem); /* Adjust for padding */
+  padding: 0 1rem; 
+  width: calc(100% - 2rem);  
   margin: 0 auto;
 }
 
@@ -37,14 +37,9 @@ body {
 
 .nav-link {
   color: #222222 !important;
-  white-space: nowrap; /* Prevent text wrapping */
+  white-space: nowrap;  
 }
-
-/* Footer */
-footer {
-  /* Add styles if needed */
-}
-
+ 
 .f-info-links a {
   text-decoration: none;
   color: #222222;
@@ -159,27 +154,27 @@ footer {
 /* Responsive Styles */
 @media (max-width: 376px) {
   .container {
-    width: calc(100% - 2rem); /* Adjust for padding */
+    width: calc(100% - 2rem); 
     max-width: 370px;
     margin: 0 auto;
-    padding: 0 1rem; /* Match navbar padding */
+    padding: 0 1rem;  
   }
   #filters {
-    width: calc(100% - 2rem); /* Adjust for padding */
+    width: calc(100% - 2rem); 
     max-width: 370px;
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     white-space: nowrap;
-    padding: 0 1rem; /* Match container padding */
+    padding: 0 1rem;  
   }
 
   .filter {
     display: inline-block;
     white-space: normal;
-    flex: 0 0 auto; /* Prevent the filters from shrinking */
-    margin-right: 1rem; /* Reduce the margin for smaller screens */
+    flex: 0 0 auto;  
+    margin-right: 1rem;  
     text-align: center;
   }
 
@@ -204,31 +199,30 @@ footer {
 
   .listing-card {
     width: 90%;
-    margin: 0 2rem !important;  /* Center horizontally */
-    text-align: center; /* Center text content */
+    margin: 0 2rem !important;  
+    text-align: center; 
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1rem; /* Add padding for spacing inside the card */
+    padding: 1rem; 
     box-sizing: border-box;
   }
 
-  /* Adjust navbar spacing */
+  
   .navbar {
     margin: 0;
-    height: 3rem; /* Reduce the height of the navbar */
-    padding: 0 1rem; /* Match container padding */
+    height: 3rem;  
+    padding: 0 1rem;  
   }
 
   .fa-compass {
-    font-size: 1.5rem; /* Adjust the icon size */
+    font-size: 1.5rem;  
   }
 
   .nav-link {
-    font-size: 0.8rem; /* Reduce the font size of navbar links */
+    font-size: 0.8rem; 
   }
-
-  /* Additional adjustments for other elements if needed */
+ 
   .tax-toggle {
     margin-left: 1rem;
     height: 2.5rem;
@@ -251,11 +245,11 @@ footer {
 
 @media (max-width: 376px) {
   .offset-md-2 {
-    margin-left: 16.66667%; /* Adjust as needed based on your column structure */
+    margin-left: 16.66667%;  
   }
 }
 
-/* Apply box-sizing globally */
+ 
 *, *::before, *::after {
   box-sizing: border-box;
 }
