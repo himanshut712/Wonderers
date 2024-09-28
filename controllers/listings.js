@@ -18,7 +18,7 @@ module.exports.renderNewForm = (req, res) => {
 module.exports.searchListings = async (req, res, next) => {
     try {
         const { query } = req.query;
-        const searchQuery = new RegExp(query, 'i'); // Case-insensitive search
+        const searchQuery = new RegExp(query, 'i'); 
         const listings = await Listing.find({
             $or: [
                 { title: searchQuery },
@@ -54,7 +54,7 @@ module.exports.showListing = async (req, res, next) => {
 
 module.exports.createListing = async (req, res, next) => {
     try {
-        console.log(req.file); // Add this line to see what req.file contains
+        console.log(req.file); 
 
         const newListing = new Listing(req.body.listing);
         newListing.owner = req.user._id;
